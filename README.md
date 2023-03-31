@@ -2,6 +2,8 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+The [core package](packages/core/README.md) of this mono repository is responsible for rendering TypeScript types and therefore entire schemas.
+
 ## Development Prerequisites
 
 -   Make sure you have the [Node.js runtime](https://nodejs.org) installed.

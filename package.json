@@ -9,16 +9,22 @@
     },
     "license": "MIT",
     "scripts": {
+        "core:build": "nx build core",
+        "core:test": "nx test core",
         "format": "prettier --write .",
         "format:check": "prettier --check .",
         "lint": "eslint . --ext js,cjs,mjs,ts,cts,mts --fix",
         "lint:check": "eslint . --ext js,cjs,mjs,ts,cts,mts",
         "spell:check": "cspell .",
-        "verify": "npm run format:check && npm run lint:check && npm run spell:check"
+        "verify": "npm run core:build && npm run core:test && npm run format:check && npm run lint:check && npm run spell:check"
     },
     "private": true,
+    "dependencies": {
+        "tslib": "^2.5.0"
+    },
     "devDependencies": {
         "@nrwl/jest": "^15.9.1",
+        "@nrwl/js": "^15.9.1",
         "@nrwl/node": "^15.9.1",
         "@nrwl/workspace": "^15.9.1",
         "@types/jest": "^29.5.0",
