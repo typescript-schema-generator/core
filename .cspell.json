@@ -1,0 +1,8 @@
+{
+    "ignorePaths": ["node_modules", "dist"],
+    "words": [
+        "cacheable",
+        "esnext",
+        "nrwl"
+    ]
+}
