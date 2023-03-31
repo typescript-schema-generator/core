@@ -13,7 +13,8 @@
         "format:check": "prettier --check .",
         "lint": "eslint . --ext js,cjs,mjs,ts,cts,mts --fix",
         "lint:check": "eslint . --ext js,cjs,mjs,ts,cts,mts",
-        "spell:check": "cspell ."
+        "spell:check": "cspell .",
+        "verify": "npm run format:check && npm run lint:check && npm run spell:check"
     },
     "private": true,
     "devDependencies": {
