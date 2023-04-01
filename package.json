@@ -13,12 +13,14 @@
         "core:test": "nx test core",
         "open-api-v2:build": "nx build open-api-v2",
         "open-api-v2:test": "nx test open-api-v2",
+        "open-api-v3:build": "nx build open-api-v2",
+        "open-api-v3:test": "nx test open-api-v2",
         "format": "prettier --write .",
         "format:check": "prettier --check .",
         "lint": "eslint . --ext js,cjs,mjs,ts,cts,mts --fix",
         "lint:check": "eslint . --ext js,cjs,mjs,ts,cts,mts",
         "spell:check": "cspell .",
-        "verify": "npm run core:build && npm run core:test && npm run open-api-v2:build && npm run open-api-v2:test && npm run format:check && npm run lint:check && npm run spell:check"
+        "verify": "npm run core:build && npm run core:test && npm run open-api-v2:build && npm run open-api-v2:test && npm run open-api-v3:build && npm run open-api-v3:test && npm run format:check && npm run lint:check && npm run spell:check"
     },
     "private": true,
     "dependencies": {
