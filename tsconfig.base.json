@@ -18,7 +18,8 @@
         "baseUrl": ".",
         "paths": {
             "@typescript-schema-generator/core": ["packages/core/src/index.ts"],
-            "@typescript-schema-generator/open-api-v2": ["packages/open-api-v2/src/index.ts"]
+            "@typescript-schema-generator/open-api-v2": ["packages/open-api-v2/src/index.ts"],
+            "@typescript-schema-generator/open-api-v3": ["packages/open-api-v3/src/index.ts"]
         }
     },
     "exclude": ["node_modules", "tmp"]

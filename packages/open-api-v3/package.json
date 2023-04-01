@@ -1,0 +1,12 @@
+{
+    "name": "@typescript-schema-generator/open-api-v3",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/typescript-schema-generator/typescript-schema-generator.git"
+    },
+    "bugs": {
+        "url": "https://github.com/typescript-schema-generator/typescript-schema-generator/issues"
+    },
+    "license": "MIT",
+    "version": "0.0.1"
+}
