@@ -5,4 +5,5 @@ export { RenderSchemaForMultipleFilesOptions } from './renderSchema/RenderSchema
 export { RenderSchemaForOneFileOptions } from './renderSchema/RenderSchemaForOneFileOptions';
 export { RenderSchemaOptions } from './renderSchema/RenderSchemaOptions';
 export { TransformNameStrategy } from './transformName/TransformNameStrategy';
+export { QuotationStrategy } from './typeRenderers/literal/type/QuotationStrategy';
 export { FileDescription } from './writeSchema/FileDescription';
