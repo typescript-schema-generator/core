@@ -1,5 +1,5 @@
 import { type ScalarType, type TypeScriptScalar } from '../../../model';
-import { type Context } from '../../../renderSchema/Context';
+import { type TypeDeclarationRenderingContext } from '../../../renderSchema/TypeDeclarationRenderingContext';
 
 const map: Record<TypeScriptScalar | 'NULL' | 'UNDEFINED', string> = Object.freeze({
     ['BOOLEAN']: 'boolean',
@@ -15,6 +15,6 @@ const map: Record<TypeScriptScalar | 'NULL' | 'UNDEFINED', string> = Object.free
  * @param context
  * @returns
  */
-export function renderScalarType(scalarType: ScalarType, _context: Context): string {
+export function renderScalarType(scalarType: ScalarType, _context: TypeDeclarationRenderingContext): string {
     return map[scalarType.type];
 }

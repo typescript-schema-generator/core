@@ -1,5 +1,5 @@
 import { type IntersectionType } from '../../../model';
-import { type Context } from '../../../renderSchema/Context';
+import { type TypeDeclarationRenderingContext } from '../../../renderSchema/TypeDeclarationRenderingContext';
 
 /**
  * Renders an intersection type.
@@ -7,6 +7,6 @@ import { type Context } from '../../../renderSchema/Context';
  * @param context
  * @returns
  */
-export function renderIntersectionType(intersectionType: IntersectionType, _context: Context): string {
+export function renderIntersectionType(intersectionType: IntersectionType, _context: TypeDeclarationRenderingContext): string {
     return intersectionType.kind;
 }

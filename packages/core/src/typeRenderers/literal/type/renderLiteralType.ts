@@ -1,5 +1,5 @@
 import { type LiteralType } from '../../../model';
-import { type Context } from '../../../renderSchema/Context';
+import { type TypeDeclarationRenderingContext } from '../../../renderSchema/TypeDeclarationRenderingContext';
 
 /**
  * Renders a literal type.
@@ -7,7 +7,7 @@ import { type Context } from '../../../renderSchema/Context';
  * @param context
  * @returns
  */
-export function renderLiteralType(literalType: LiteralType, context: Context): string {
+export function renderLiteralType(literalType: LiteralType, context: TypeDeclarationRenderingContext): string {
     if (literalType.scalar === 'STRING')
         return context.options.literal.type.quotes === 'DOUBLE' ? `"${literalType.value}"` : `'${literalType.value}'`;
 

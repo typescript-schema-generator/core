@@ -1,10 +1,12 @@
 import { TypeKey, type ScalarType } from '../../../model';
-import { type Context } from '../../../renderSchema/Context';
 import { type RenderSchemaOptions } from '../../../renderSchema/RenderSchemaOptions';
+import { type TypeDeclarationRenderingContext } from '../../../renderSchema/TypeDeclarationRenderingContext';
 import { renderScalarTypeDeclaration } from './renderScalarTypeDeclaration';
 
 describe('renderScalarTypeDeclaration', () => {
-    const context: Context = { options: { scalar: { declaration: {} } } as RenderSchemaOptions } as Context;
+    const context: TypeDeclarationRenderingContext = {
+        options: { scalar: { declaration: {} } } as RenderSchemaOptions,
+    } as TypeDeclarationRenderingContext;
     const scalarType: ScalarType = { kind: TypeKey.scalar, type: 'STRING' };
 
     it('should render a scalar type declaration with semicolon at the end', () => {

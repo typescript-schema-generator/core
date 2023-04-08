@@ -1,5 +1,5 @@
 import { type ArrayType } from '../../../model';
-import { type Context } from '../../../renderSchema/Context';
+import { type TypeDeclarationRenderingContext } from '../../../renderSchema/TypeDeclarationRenderingContext';
 import { renderType } from '../../renderType';
 
 /**
@@ -8,7 +8,7 @@ import { renderType } from '../../renderType';
  * @param context
  * @returns
  */
-export function renderArrayType(arrayType: ArrayType, context: Context): string {
+export function renderArrayType(arrayType: ArrayType, context: TypeDeclarationRenderingContext): string {
     const renderedType: string = renderType(arrayType.type, context);
 
     if (context.options.array.type.strategy === 'GENERIC') return `Array<${renderedType}>`;

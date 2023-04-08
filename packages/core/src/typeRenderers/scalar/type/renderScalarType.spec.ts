@@ -1,9 +1,9 @@
 import { TypeKey } from '../../../model';
-import { type Context } from '../../../renderSchema/Context';
+import { type TypeDeclarationRenderingContext } from '../../../renderSchema/TypeDeclarationRenderingContext';
 import { renderScalarType } from './renderScalarType';
 
 describe('renderScalarType', () => {
-    const context: Context = {} as Context;
+    const context: TypeDeclarationRenderingContext = {} as TypeDeclarationRenderingContext;
 
     it('should render a string type', () => {
         expect(renderScalarType({ kind: TypeKey.scalar, type: 'STRING' }, context)).toEqual('string');

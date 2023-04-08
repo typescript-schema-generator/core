@@ -2,6 +2,10 @@
  * Options for rendering an object type.
  */
 export interface RenderObjectTypeInMultipleLinesOptions {
-    emptyLinesBetweenProperties: number;
     handleAnonymousTypes: 'INLINE' | 'NAMESPACE';
+    propertyIndentation: number;
+
+    emptyLinesBeforeFirstProperty: number;
+    emptyLinesBetweenProperties: number;
+    emptyLinesAfterLastProperty: number;
 }

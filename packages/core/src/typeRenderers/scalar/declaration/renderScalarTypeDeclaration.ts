@@ -1,5 +1,5 @@
 import { type ScalarType, type TypeDeclaration } from '../../../model';
-import { type Context } from '../../../renderSchema/Context';
+import { type TypeDeclarationRenderingContext } from '../../../renderSchema/TypeDeclarationRenderingContext';
 import { type RenderedTypeDeclaration } from '../../RenderedTypeDeclaration';
 import { renderScalarType } from '../type/renderScalarType';
 
@@ -9,7 +9,10 @@ import { renderScalarType } from '../type/renderScalarType';
  * @param context
  * @returns
  */
-export function renderScalarTypeDeclaration({ declaration, type }: TypeDeclaration<ScalarType>, context: Context): RenderedTypeDeclaration {
+export function renderScalarTypeDeclaration(
+    { declaration, type }: TypeDeclaration<ScalarType>,
+    context: TypeDeclarationRenderingContext,
+): RenderedTypeDeclaration {
     let typeDeclaration: string = '';
 
     typeDeclaration += 'type ' + declaration.name + ' = ' + renderScalarType(type, context);

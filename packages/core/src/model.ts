@@ -105,6 +105,7 @@ export interface ArrayType {
  */
 export interface ReferenceType {
     kind: TypeKey.reference;
+    name: string;
 }
 
 /**

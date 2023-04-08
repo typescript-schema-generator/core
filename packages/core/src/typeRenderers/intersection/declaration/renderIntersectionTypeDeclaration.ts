@@ -1,5 +1,5 @@
 import { type IntersectionType, type TypeDeclaration } from '../../../model';
-import { type Context } from '../../../renderSchema/Context';
+import { type TypeDeclarationRenderingContext } from '../../../renderSchema/TypeDeclarationRenderingContext';
 import { type RenderedTypeDeclaration } from '../../RenderedTypeDeclaration';
 import { renderIntersectionType } from '../type/renderIntersectionType';
 
@@ -11,7 +11,7 @@ import { renderIntersectionType } from '../type/renderIntersectionType';
  */
 export function renderIntersectionTypeDeclaration(
     { declaration, type }: TypeDeclaration<IntersectionType>,
-    context: Context,
+    context: TypeDeclarationRenderingContext,
 ): RenderedTypeDeclaration {
     return {
         name: declaration.name,

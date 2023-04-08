@@ -1,5 +1,5 @@
 import { type ReferenceType, type TypeDeclaration } from '../../../model';
-import { type Context } from '../../../renderSchema/Context';
+import { type TypeDeclarationRenderingContext } from '../../../renderSchema/TypeDeclarationRenderingContext';
 import { type RenderedTypeDeclaration } from '../../RenderedTypeDeclaration';
 import { renderReferenceType } from '../type/renderReferenceType';
 
@@ -11,7 +11,7 @@ import { renderReferenceType } from '../type/renderReferenceType';
  */
 export function renderReferenceTypeDeclaration(
     { declaration, type }: TypeDeclaration<ReferenceType>,
-    context: Context,
+    context: TypeDeclarationRenderingContext,
 ): RenderedTypeDeclaration {
     return {
         name: declaration.name,

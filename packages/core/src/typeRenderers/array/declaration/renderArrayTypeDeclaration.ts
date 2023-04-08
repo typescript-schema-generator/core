@@ -1,7 +1,7 @@
 import { type CommentStrategy } from '../../../commonRenderers/comment/CommentStrategy';
 import { renderComment } from '../../../commonRenderers/comment/renderComment';
 import { type ArrayType, type TypeDeclaration } from '../../../model';
-import { type Context } from '../../../renderSchema/Context';
+import { type TypeDeclarationRenderingContext } from '../../../renderSchema/TypeDeclarationRenderingContext';
 import { transformName } from '../../../transformName/transformName';
 import { type RenderedTypeDeclaration } from '../../RenderedTypeDeclaration';
 import { renderArrayType } from '../type/renderArrayType';
@@ -12,7 +12,10 @@ import { renderArrayType } from '../type/renderArrayType';
  * @param context
  * @returns
  */
-export function renderArrayTypeDeclaration({ declaration, type }: TypeDeclaration<ArrayType>, context: Context): RenderedTypeDeclaration {
+export function renderArrayTypeDeclaration(
+    { declaration, type }: TypeDeclaration<ArrayType>,
+    context: TypeDeclarationRenderingContext,
+): RenderedTypeDeclaration {
     let renderedArrayTypeDeclaration: string = '';
 
     if (declaration.description) {

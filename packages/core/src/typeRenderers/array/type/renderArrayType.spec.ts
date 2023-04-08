@@ -1,11 +1,11 @@
 import { TypeKey } from '../../../model';
-import { type Context } from '../../../renderSchema/Context';
 import { type RenderSchemaOptions } from '../../../renderSchema/RenderSchemaOptions';
+import { type TypeDeclarationRenderingContext } from '../../../renderSchema/TypeDeclarationRenderingContext';
 import { QuotationStrategy } from '../../literal/type/QuotationStrategy';
 import { renderArrayType } from './renderArrayType';
 
 describe('renderArrayType', () => {
-    const context: Context = {
+    const context: TypeDeclarationRenderingContext = {
         currentIndentation: 0,
         options: {
             array: {
@@ -15,7 +15,7 @@ describe('renderArrayType', () => {
                 type: { quotes: QuotationStrategy.double },
             },
         } as RenderSchemaOptions,
-    };
+    } as TypeDeclarationRenderingContext;
 
     it('should', () => {
         expect(

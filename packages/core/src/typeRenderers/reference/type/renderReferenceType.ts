@@ -1,5 +1,5 @@
 import { type ReferenceType } from '../../../model';
-import { type Context } from '../../../renderSchema/Context';
+import { type TypeDeclarationRenderingContext } from '../../../renderSchema/TypeDeclarationRenderingContext';
 
 /**
  * Renders a reference type.
@@ -7,6 +7,6 @@ import { type Context } from '../../../renderSchema/Context';
  * @param context
  * @returns
  */
-export function renderReferenceType(referenceType: ReferenceType, _context: Context): string {
-    return referenceType.kind;
+export function renderReferenceType(referenceType: ReferenceType, _context: TypeDeclarationRenderingContext): string {
+    return referenceType.name;
 }

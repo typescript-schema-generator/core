@@ -1,5 +1,5 @@
 import { type EnumerationType, type TypeDeclaration } from '../../../model';
-import { type Context } from '../../../renderSchema/Context';
+import { type TypeDeclarationRenderingContext } from '../../../renderSchema/TypeDeclarationRenderingContext';
 import { type RenderedTypeDeclaration } from '../../RenderedTypeDeclaration';
 import { renderEnumerationType } from '../type/renderEnumerationType';
 
@@ -11,7 +11,7 @@ import { renderEnumerationType } from '../type/renderEnumerationType';
  */
 export function renderEnumerationTypeDeclaration(
     { declaration, type }: TypeDeclaration<EnumerationType>,
-    context: Context,
+    context: TypeDeclarationRenderingContext,
 ): RenderedTypeDeclaration {
     return {
         name: declaration.name,

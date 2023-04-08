@@ -1,5 +1,5 @@
 import { type TypeDeclaration, type UnionType } from '../../../model';
-import { type Context } from '../../../renderSchema/Context';
+import { type TypeDeclarationRenderingContext } from '../../../renderSchema/TypeDeclarationRenderingContext';
 import { type RenderedTypeDeclaration } from '../../RenderedTypeDeclaration';
 import { renderUnionType } from '../type/renderUnionType';
 
@@ -9,7 +9,10 @@ import { renderUnionType } from '../type/renderUnionType';
  * @param context
  * @returns
  */
-export function renderUnionTypeDeclaration({ declaration, type }: TypeDeclaration<UnionType>, context: Context): RenderedTypeDeclaration {
+export function renderUnionTypeDeclaration(
+    { declaration, type }: TypeDeclaration<UnionType>,
+    context: TypeDeclarationRenderingContext,
+): RenderedTypeDeclaration {
     return {
         name: declaration.name,
         references: [],

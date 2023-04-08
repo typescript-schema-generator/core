@@ -1,5 +1,5 @@
 import { type LiteralType, type TypeDeclaration } from '../../../model';
-import { type Context } from '../../../renderSchema/Context';
+import { type TypeDeclarationRenderingContext } from '../../../renderSchema/TypeDeclarationRenderingContext';
 import { type RenderedTypeDeclaration } from '../../RenderedTypeDeclaration';
 import { renderLiteralType } from '../type/renderLiteralType';
 
@@ -11,7 +11,7 @@ import { renderLiteralType } from '../type/renderLiteralType';
  */
 export function renderLiteralTypeDeclaration(
     { declaration, type }: TypeDeclaration<LiteralType>,
-    context: Context,
+    context: TypeDeclarationRenderingContext,
 ): RenderedTypeDeclaration {
     return {
         name: declaration.name,
